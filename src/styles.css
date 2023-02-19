@@ -1,4 +1,99 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  
+}
+
+.pilytix-title {
+  color: #FFFFFF;
+}
+
+
 .App {
   font-family: sans-serif;
   text-align: center;
+  
+}
+
+
+div.css-11xur9t-MuiPaper-root-MuiTableContainer-root:nth-child(1) {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: lightblue;
+}
+
+.dec-table {
+  background-color: lightcoral;
+}
+
+.card-container {
+  padding: 0 1rem 1rem 1rem;
+  border-radius: 6px;
+  
+  box-shadow: 0 0px 5px 2px #c4c0c0;
+  background-color: #f5f3f3;
+  position: fixed;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  width: 500px; 
+  max-height: 90%;
+  border: solid 1px black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none; 
+  animation: swapcard 1s linear; 
+  overflow-y: scroll;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: fade-in 1s linear forwards
+  
+  
+}
+
+.title {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 1.25rem;
+}
+
+.rep-prob {
+  grid-column: 2;
+  grid-row: 3;
+  
+  
+}
+
+.stars {
+  grid-row: 3;
+  grid-column: 1;
+  
+  
+}
+
+.stage {
+  grid-row: 4;
+  grid-column: span 3;
+  justify-self: center;
+}
+
+@keyframes fade-in {
+  0% {background-color: rgba(0, 0, 0, 0.0);}
+  100% {background-color: rgba(0, 0, 0, 0.7);}
+}
+
+@keyframes swapcard {
+  0% {opacity: 0};
+  100%{opacity: 1};
 }
